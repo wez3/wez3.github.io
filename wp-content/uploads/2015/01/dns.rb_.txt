@@ -1,0 +1,55 @@
+#!/usr/bin/ruby
+
+require 'socket'
+
+class UDPServer
+  def initialize(port)
+    @port = port
+  end
+
+  def start
+    farray = []
+    oarray = []
+    @socket = UDPSocket.new
+    @socket.bind('', @port)
+    cmd = true
+    while true
+      data , soc = @socket.recvfrom(1024)
+      idx = 12
+      len = data[idx].ord
+      domain = ""
+      until len == 0 do
+        domain += data[idx + 1, len] + "."
+        idx += len + 1
+        len = data[idx].ord
+      end
+      @socket.send(response(data), 0, soc[3], soc[1])
+      farray << domain
+      if domain.split(".")[-3] == "theend"
+          farray.uniq!
+          farray.pop
+          for i in farray
+              oarray << i.split(".")[-3]
+          end
+          comp = oarray.join()
+          output = comp.gsub(/../) { |pair| pair.hex.chr }
+          puts output
+          farray = []
+          oarray = []
+      end
+    end
+  end
+
+  def response(data)
+    response = "#{data[0,2]}\x81\x00#{data[4,2] * 2}\x00\x00\x00\x00"
+    response += data[12..-1]
+    response += "\xc0\x0c\x00\x01\x00\x01"
+    response += [60].pack("N")
+    rdata = "1.1.1.1".split('.').collect(&:to_i).pack("C*")
+    response += [rdata.length].pack("n")
+    response += rdata
+  end
+end
+
+server = UDPServer.new(53)
+server.start

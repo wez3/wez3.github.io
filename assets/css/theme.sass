@@ -1,0 +1,56 @@
+---
+---
+
+@import index
+
+body > header, article, body > footer
+  padding: 1.5em
+
+@media (min-width: 40em)
+  body > header, article, body > footer
+    padding: 1.5em calc(34% - 12rem)
+
+article header h1
+  font-size: 1.75em
+  padding: .25em 0
+  border-bottom: {% if site.dark_header %}1.5px solid lighten($dark, 5%){% else %}1px solid reduce(16){% endif %}
+  margin-bottom: .7em
+
+{% if site.dark_header %}
+
+body > header
+  background: lighten($dark, 1%)
+  color: #fff
+  border-bottom: 1px solid rgba($light, 0.05)
+
+{% else %}
+
+body > header
+  background: rgba($light, 0.01)
+  box-shadow: 0 0 .6em rgba($dark, 0.06)
+  border-bottom: 1px solid reduce(16)
+
+{% endif %}
+
+{% if site.show_footer %}
+
+@import anchor, footer
+
+{% if site.dark_footer %}
+
+body > footer
+  background: rgba(lighten($dark, 1%), 0.9)
+  color: #aaa
+  border-top: 1px solid rgba($light, 0.05)
+
+{% else %}
+
+body > footer
+  background: rgba($light, 0.01)
+  box-shadow: 0 0 .6em rgba($dark, 0.05) inset
+  border-top: 1px solid reduce(12)
+  color: reduce(100)
+
+{% endif %}
+
+{% endif %}

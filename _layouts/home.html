@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article>
+    {%- assign posts = paginator.posts | default: site.posts -%}
+    {% for post in posts %}
+      <a href="{{ post.url | relative_url }}"><h1>{{ post.title }}</h1></a>
+      {% assign content = post.content | split: "<!--more-->" %}
+      {{ content[0] | truncatewords: 200, True }}
+      <p><a href="{{ post.url | relative_url }}">Read more...</a></p>
+      <hr>
+    {% endfor %}
+</article>
+
+{% if paginator.total_pages > 1 %}
+<footer>
+  <a {% if paginator.previous_page %}class="gray" href="{{ paginator.previous_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>« newer posts</a>
+  <span>page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <a {% if paginator.next_page %}class="gray" href="{{ paginator.next_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>older posts »</a>
+</footer>
+{% endif %}
