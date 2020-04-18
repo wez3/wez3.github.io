@@ -6,7 +6,7 @@ author: wesley
 layout: post
 permalink: /2015/08/compromising-a-honeypot-network-through-the-kippo-password-when-logstash-exec-is-used/
 ---
-This is a shared post by [@rikvduijn](http://www.twitter.com/rikvduijn) and [@wez3forsec](http://www.twitter.com/wez3forsec).
+This is a shared post by [@rikvduijn](http://www.twitter.com/rikvduijn) and [@wesleyneelen](http://www.twitter.com/wesleyneelen).
 
 We have been playing with Honeypots lately (shoutout to Theo and Sebastian for adding their honeypots to the network), collecting and visualizing the data from the honeypots is done via ELK. The environment contains a central server to centralize all the collected data from the honeypots that are connected to it. The environment is visualized in the following diagram:
 
