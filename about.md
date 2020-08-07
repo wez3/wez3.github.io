@@ -3,7 +3,7 @@ permalink: /about.html
 title: "About"
 ---
 
-My name is Wesley Neelen and i am working in IT security.
+My name is Wesley Neelen and i am working in IT security @ [Zolder](https://zolder.io/).
 
 Twitter: [twitter.com/wesleyneelen](https://twitter.com/wesleyneelen)<br>
 LinkedIn: [linkedin.com/in/wesleyneelen/](https://www.linkedin.com/in/wesleyneelen/)<br>
