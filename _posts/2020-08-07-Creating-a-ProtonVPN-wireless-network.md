@@ -34,7 +34,7 @@ Initialize the configuration, walk through the steps by filling in your ProtonVP
 sudo protonvpn init
 ```
 
-Lets do some additional configuration. One thing I noticed is that whenever a connection is established with ProtonVPN, I’m not able to SSH in the box anymore due to the added routes. To prevent this, we configure split tunneling through the follow command. Choose the option split tunneling and set it for the IP-address where your Ubuntu VM is located, e.g. 192.168.1.1/24:
+Lets do some additional configuration. One thing I noticed is that whenever a connection is established with ProtonVPN, I’m not able to SSH in the box anymore due to the added routes. To prevent this, we configure split tunneling through the following command. Choose the option split tunneling and set it for the subnet where your Ubuntu VM is located, e.g. 192.168.1.1/24:
 
 ```
 protonvpn configure
