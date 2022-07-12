@@ -5,7 +5,7 @@ title: "Other work"
 
 I like to share knowledge, write blogs & to do talks. Here is a list with some of my other work.
 
-
+2022 | Offensive Security Experienced Pentester (OSEP) Cheatsheet | [Cheatsheet](/osep.html)
 2020 | Hacking traffic lights @ [DEF CON Safe Mode](https://www.defcon.org/html/defcon-safemode/dc-safemode-index.html) | [Talk](https://www.youtube.com/watch?v=L9UUD3a7xP4)
 2020 | Building a Zolder logo | [Blog](https://zolder.io/2020/04/22/building-a-zolder-logo/)
 2020 | FTCODE: taking over (a portion of) the botnet | [Blog](https://www.kpn.com/security-blogs/FTCODE-taking-over-a-portion-of-the-botnet.htm)

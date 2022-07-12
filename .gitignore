@@ -4,3 +4,5 @@ _site/
 .jekyll-metadata
 .DS_Store
 docker-github-pages.yml
+Gemfile
+Gemfile.lock
