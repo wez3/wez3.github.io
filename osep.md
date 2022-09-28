@@ -17,6 +17,7 @@ A cheatsheet with useful commands used during my OSEP course.
   - [Unconstrained delegation](#unconstrained-delegation)
   - [Constrained delegation](#constrained-delegation)
   - [Resource-Based Constrained Delegation](#resource-based-constrained-delegation)
+  - [Kerberoasting](#kerberoasting)
   - [Forest enum](#forest-enum)
   - [Forest compromise](#forest-compromise)
   - [Beyond forest enum](#beyond-forest-enum)
